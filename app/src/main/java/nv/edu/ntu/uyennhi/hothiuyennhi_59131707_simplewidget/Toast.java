@@ -10,13 +10,13 @@ public class Toast {
     private String Name;
     private String NS;
     private boolean GT;
-    private ArrayList<String> SoThich;
+    private ArrayList<String> edtSoThich;
 
     public Toast(){
         this.Name = "";
         this.NS ="";
         this.GT = true;
-        this.SoThich = new ArrayList<>();
+        this.edtSoThich = new ArrayList<>();
     }
     public void setName(String Name){
         this.Name = Name;
@@ -31,11 +31,11 @@ public class Toast {
     }
 
     public void setSoThich(ArrayList<String> SoThich){
-        this.SoThich = SoThich;
+        this.edtSoThich = SoThich;
     }
 
     public void DSSoThich (String ST){
-        SoThich.add(ST);
+        edtSoThich.add(ST);
     }
 
     @NonNull
@@ -44,6 +44,6 @@ public class Toast {
             return   Name + '\n' +
                     "Ngày sinh: " + NS + '\n' +
                     "Giới tính: " + (GT ? "Nam" : "Nữ") + '\n' +
-                    "Sở thích: " + TextUtils.join("; ", SoThich);
+                    "Sở thích: " + TextUtils.join("; ", edtSoThich);
     }
 }
